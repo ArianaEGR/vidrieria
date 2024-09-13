@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vidriería Ejemplo</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-    <!-- Menú de Navegación -->
-  /* Global */
+/* Global */
 * {
     margin: 0;
     padding: 0;
@@ -56,7 +45,7 @@ nav ul li a:hover {
 
 /* Encabezado */
 header {
-    background-image: url('imagenes/pexels-pixabay-531880.jpg');
+    background-image: url('imagenes/fondo_vidrio.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -115,24 +104,6 @@ header {
     margin-bottom: 40px;
 }
 
-/* Servicios */
-.services-container {
-    display: flex;
-    justify-content: space-around;
-}
-
-.service {
-    max-width: 300px;
-    text-align: center;
-}
-
-.service img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
 /* Galería */
 .gallery-container {
     display: grid;
@@ -177,4 +148,3 @@ form button {
 form button:hover {
     background-color: #0056b3;
 }
-
