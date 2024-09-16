@@ -1,4 +1,4 @@
-/* Global */
+/* Estilos globales */
 * {
     margin: 0;
     padding: 0;
@@ -45,7 +45,7 @@ nav ul li a:hover {
 
 /* Encabezado */
 header {
-    background-image: url('imagenes/Fondo.jpeg');
+    background-image: url('imagenes/fondo_vidrio.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -93,7 +93,7 @@ header {
     }
 }
 
-/* Sección */
+/* Sección de servicios */
 .section {
     padding: 80px 20px;
     text-align: center;
@@ -102,6 +102,53 @@ header {
 .section h2 {
     font-size: 36px;
     margin-bottom: 40px;
+}
+
+/* Menú de servicios */
+.services-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.service {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.service-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.service img:hover {
+    transform: scale(1.05);
+}
+
+.service-detail {
+    display: none;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.service-detail img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilos para mostrar detalles */
+#instalacion-vidrios:target,
+#disenos-personalizados:target {
+    display: block;
 }
 
 /* Galería */
@@ -122,7 +169,7 @@ header {
     transform: scale(1.05);
 }
 
-/* Contacto */
+/* Sección de contacto */
 form {
     max-width: 500px;
     margin: 0 auto;
