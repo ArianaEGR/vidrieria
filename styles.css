@@ -8,6 +8,10 @@
 body {
     font-family: Arial, sans-serif;
     color: #333;
+    background-image: url('imagenes/Fondo.jpeg'); /* Aplica el fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen de fondo */
+    background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
 }
 
 /* Navegación */
@@ -15,7 +19,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #007BFF;
+    background-color: rgba(0, 123, 255, 0.8); /* Hacer transparente el fondo del menú */
     padding: 20px;
 }
 
@@ -45,7 +49,7 @@ nav ul li a:hover {
 
 /* Encabezado */
 header {
-    background-image: url('imagenes/Fondo.jpeg');
+    background-image: url('imagenes/Fondo.jpeg'); /* Si quieres que el encabezado tenga el mismo fondo */
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -97,6 +101,7 @@ header {
 .section {
     padding: 80px 20px;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo claro semitransparente para mayor legibilidad */
 }
 
 .section h2 {
@@ -173,6 +178,9 @@ header {
 form {
     max-width: 500px;
     margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo claro para el formulario */
+    padding: 20px;
+    border-radius: 10px;
 }
 
 form input, form textarea {
