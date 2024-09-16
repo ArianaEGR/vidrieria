@@ -19,7 +19,7 @@ document.getElementById('whatsapp-link').addEventListener('click', function(even
     const numeroWhatsApp = '+59898948048'; // Reemplaza con tu número
 
     // Crear el enlace de WhatsApp con el mensaje
-    const whatsappUrl = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/${+59898948048}?text=${encodeURIComponent(whatsappMessage)}`;
 
     // Redirigir a WhatsApp
     window.open(whatsappUrl, '_blank');
