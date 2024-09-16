@@ -13,13 +13,13 @@ document.getElementById('whatsapp-link').addEventListener('click', function(even
     }
 
     // Formatear el mensaje para WhatsApp
-    const whatsappMessage = `Hola, soy ${nombre}. Mi teléfono es ${telefono}. ${mensaje}`;
+    const whatsappMessage = `Hola, soy ${nombre}. ${mensaje}`;
 
     // Número de teléfono de la vidriería (sin espacios ni símbolos, solo números con código de país)
-    const numeroWhatsApp = '+59898948048'; // Reemplaza con tu número
+    const numeroWhatsApp = '59898948048'; // Reemplaza con tu número
 
     // Crear el enlace de WhatsApp con el mensaje
-    const whatsappUrl = `https://wa.me/${+59898948048}?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/${59898948048}?text=${encodeURIComponent(whatsappMessage)}`;
 
     // Redirigir a WhatsApp
     window.open(whatsappUrl, '_blank');
