@@ -1,26 +1,18 @@
-document.getElementById('whatsapp-link').addEventListener('click', function(event) {
-    event.preventDefault();  // Evita el comportamiento por defecto del enlace
+   document.getElementById('whatsapp-link').addEventListener('click', function(event) {
+            // Evitar que el enlace funcione de manera predeterminada
+            event.preventDefault();
 
-    // Obtener los valores de los campos
-    const nombre = document.getElementById('nombre').value;
-    const telefono = document.getElementById('telefono').value;
-    const mensaje = document.getElementById('mensaje').value;
+            // Obtener los valores del formulario
+            const nombre = document.getElementById('nombre').value;
+            const mensaje = document.getElementById('mensaje').value;
 
-    // Validar que los campos no estén vacíos
-    if (nombre === '' || telefono === '' || mensaje === '') {
-        alert('Por favor, completa todos los campos.');
-        return;
-    }
+            // Crear el mensaje de WhatsApp
+            const whatsappMessage = `Hola, soy ${nombre}. ${mensaje}`;
 
-    // Formatear el mensaje para WhatsApp
-    const whatsappMessage = `Hola, soy ${nombre}. ${mensaje}`;
+            // Crear el enlace de WhatsApp con el mensaje
+            const whatsappUrl = `https://wa.me/59898948048?text=${encodeURIComponent(whatsappMessage)}`;
 
-    // Número de teléfono de la vidriería (sin espacios ni símbolos, solo números con código de país)
-    const numeroWhatsApp = '59898948048'; // Reemplaza con tu número
-
-    // Crear el enlace de WhatsApp con el mensaje
-    const whatsappUrl = `https://wa.me/${59898948048}?text=${encodeURIComponent(whatsappMessage)}`;
-
-    // Redirigir a WhatsApp
-    window.open(whatsappUrl, '_blank');
-});
+            // Redirigir a WhatsApp
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
