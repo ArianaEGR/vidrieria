@@ -10,7 +10,7 @@
 
     <!-- Menú de Navegación -->
     <nav>
-        <div class="logo">Vidriería Ejemplo</div>
+        <div class="logo">Vidriería Lezica</div>
         <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#servicios">Servicios</a></li>
@@ -31,17 +31,33 @@
     <!-- Sección de Servicios -->
     <section id="servicios" class="section">
         <h2>Nuestros Servicios</h2>
-        <div class="services-container">
+        <div class="services-menu">
             <div class="service">
-                <img src="imagenes/baño trabajo.jpeg" alt="Servicio 1">
-                <h3>Instalación de Vidrios</h3>
-                <p>Instalamos vidrios de alta calidad en todo tipo de estructuras.</p>
+                <a href="#instalacion-vidrios" class="service-link">
+                    <h3>Instalación de Vidrios</h3>
+                    <img src="imagenes/baño trabajo.jpeg" alt="Instalación de Vidrios">
+                </a>
             </div>
             <div class="service">
-                <img src="imagenes/circulo trabajo.jpeg" alt="Servicio 2">
-                <h3>Diseño Personalizado</h3>
-                <p>Diseñamos ventanas, puertas y estructuras de vidrio a medida.</p>
+                <a href="#disenos-personalizados" class="service-link">
+                    <h3>Diseños Personalizados</h3>
+                    <img src="imagenes/circulo trabajo.jpeg" alt="Diseños Personalizados">
+                </a>
             </div>
+        </div>
+
+        <!-- Sub-sección de Instalación de Vidrios -->
+        <div id="instalacion-vidrios" class="service-detail">
+            <h3>Instalación de Vidrios</h3>
+            <p>Realizamos instalación de vidrios de alta calidad para cualquier tipo de estructura: ventanas, puertas, mamparas, y más.</p>
+            <img src="imagenes/baño trabajo.jpeg" alt="Instalación de Vidrios">
+        </div>
+
+        <!-- Sub-sección de Diseños Personalizados -->
+        <div id="disenos-personalizados" class="service-detail">
+            <h3>Diseños Personalizados</h3>
+            <p>Ofrecemos diseños personalizados de vidrio que se ajustan a cualquier tipo de espacio y estilo.</p>
+            <img src="imagenes/circulo trabajo.jpeg" alt="Diseños Personalizados">
         </div>
     </section>
 
@@ -80,3 +96,4 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
