@@ -83,16 +83,35 @@
     </section>
 
    <!-- Sección de Contacto -->
-<section id="contacto" class="section">
-    <h2>Contacto</h2>
-    <form id="contact-form">
-        <input type="text" id="nombre" placeholder="Nombre" required>
-        <input type="text" id="telefono" placeholder="Número de teléfono" required>
-        <textarea id="mensaje" placeholder="Mensaje" required></textarea>
-        <a href="#" id="whatsapp-link" class="btn">Enviar por WhatsApp</a>
-    </form>
-</section>
+   <section id="contacto" class="section">
+        <h2>Atención 24h</h2>
+        <form id="contact-form">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <textarea id="mensaje" placeholder="Mensaje" required></textarea>
+            <a href="#" id="whatsapp-link" class="btn">Enviar por WhatsApp</a>
+        </form>
+    </section>
+
+    <!-- Script para manejar el envío por WhatsApp -->
+    <script>
+        document.getElementById('whatsapp-link').addEventListener('click', function(event) {
+            // Evitar que el enlace funcione de manera predeterminada
+            event.preventDefault();
+
+            // Obtener los valores del formulario
+            const nombre = document.getElementById('nombre').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+            // Crear el mensaje de WhatsApp
+            const whatsappMessage = `Hola, soy ${nombre}. ${mensaje}`;
+
+            // Crear el enlace de WhatsApp con el mensaje
+            const whatsappUrl = `https://wa.me/59898948048?text=${encodeURIComponent(whatsappMessage)}`;
+
+            // Redirigir a WhatsApp
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
 
 </body>
 </html>
-
