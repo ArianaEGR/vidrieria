@@ -68,17 +68,17 @@
         <!-- Sub-sección de Nuestros Proyectos -->
         <h3>Nuestros Proyectos</h3>
         <div class="gallery-container">
-            <img src="imagenes/mampara trabajo.jpeg" alt="Proyecto 1" data-model="Mampara de Vidrio">
-            <img src="imagenes/puerta local trabajo.jpeg" alt="Proyecto 2" data-model="Puerta de Vidrio">
-            <img src="imagenes/piso vidrio ejem.jpeg" alt="Proyecto 3" data-model="Piso de Vidrio">
+            <img src="imagenes/mampara trabajo.jpeg" alt="Proyecto 1" data-model="Mampara de Vidrio" data-image="imagenes/mampara trabajo.jpeg">
+            <img src="imagenes/puerta local trabajo.jpeg" alt="Proyecto 2" data-model="Puerta de Vidrio" data-image="imagenes/puerta local trabajo.jpeg">
+            <img src="imagenes/piso vidrio ejem.jpeg" alt="Proyecto 3" data-model="Piso de Vidrio" data-image="imagenes/piso vidrio ejem.jpeg">
         </div>
 
         <!-- Sub-sección de Ejemplos Personalizados -->
         <h3>Ejemplos Personalizados</h3>
         <div class="gallery-container">
-            <img src="imagenes/puerta con arenado ejem.jpeg" alt="Ejemplo Personalizado 1" data-model="Puerta con Arenado">
-            <img src="imagenes/puerta con madera ejemplo.jpeg" alt="Ejemplo Personalizado 2" data-model="Puerta con Madera">
-            <img src="imagenes/mesa vidrio.jpeg" alt="Ejemplo Personalizado 3" data-model="Mesa de Vidrio">
+            <img src="imagenes/puerta con arenado ejem.jpeg" alt="Ejemplo Personalizado 1" data-model="Puerta con Arenado" data-image="imagenes/puerta con arenado ejem.jpeg">
+            <img src="imagenes/puerta con madera ejemplo.jpeg" alt="Ejemplo Personalizado 2" data-model="Puerta con Madera" data-image="imagenes/puerta con madera ejemplo.jpeg">
+            <img src="imagenes/mesa vidrio.jpeg" alt="Ejemplo Personalizado 3" data-model="Mesa de Vidrio" data-image="imagenes/mesa vidrio.jpeg">
         </div>
     </section>
 
@@ -108,9 +108,11 @@
         document.querySelectorAll('.gallery-container img').forEach(function(img) {
             img.addEventListener('click', function() {
                 const modelo = img.getAttribute('data-model');
+                const imagenUrl = img.getAttribute('data-image');
                 const medidas = prompt(`Por favor, ingresa las medidas para el ${modelo}:`);
+
                 if (medidas) {
-                    const whatsappMessage = `Hola, estoy interesado en el modelo ${modelo}. Las medidas que necesito son: ${medidas}.`;
+                    const whatsappMessage = `🔹 *Consulta de modelo*: ${modelo}\n🔹 *Medidas*: ${medidas}\n🔹 *Enviado desde*: Vidriería InnovaCrystal\n🔹 *Imagen del modelo*: ${window.location.origin}/${imagenUrl}`;
                     const whatsappUrl = `https://wa.me/59898948048?text=${encodeURIComponent(whatsappMessage)}`;
                     window.open(whatsappUrl, '_blank');
                 }
