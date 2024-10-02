@@ -45,40 +45,15 @@
                 </a>
             </div>
         </div>
-
-        <!-- Sub-sección de Instalación de Vidrios -->
-        <div id="instalacion-vidrios" class="service-detail">
-            <h3>Instalación de Vidrios</h3>
-            <p>Realizamos instalación de vidrios de alta calidad para cualquier tipo de estructura: ventanas, puertas, mamparas, y más.</p>
-            <img src="imagenes/baño trabajo.jpeg" alt="Instalación de Vidrios">
-        </div>
-
-        <!-- Sub-sección de Diseños Personalizados -->
-        <div id="disenos-personalizados" class="service-detail">
-            <h3>Diseños Personalizados</h3>
-            <p>Ofrecemos diseños personalizados de vidrio que se ajustan a cualquier tipo de espacio y estilo.</p>
-            <img src="imagenes/circulo trabajo.jpeg" alt="Diseños Personalizados">
-        </div>
     </section>
 
-    <!-- Sección de Galería con División -->
+    <!-- Sección de Galería -->
     <section id="galeria" class="section">
         <h2>Nuestra Galería</h2>
-
-        <!-- Sub-sección de Nuestros Proyectos -->
-        <h3>Nuestros Proyectos</h3>
         <div class="gallery-container">
-            <img src="imagenes/mampara trabajo.jpeg" alt="Proyecto 1" data-model="Mampara de Vidrio" data-image="imagenes/mampara trabajo.jpeg">
-            <img src="imagenes/puerta local trabajo.jpeg" alt="Proyecto 2" data-model="Puerta de Vidrio" data-image="imagenes/puerta local trabajo.jpeg">
-            <img src="imagenes/piso vidrio ejem.jpeg" alt="Proyecto 3" data-model="Piso de Vidrio" data-image="imagenes/piso vidrio ejem.jpeg">
-        </div>
-
-        <!-- Sub-sección de Ejemplos Personalizados -->
-        <h3>Ejemplos Personalizados</h3>
-        <div class="gallery-container">
-            <img src="imagenes/puerta con arenado ejem.jpeg" alt="Ejemplo Personalizado 1" data-model="Puerta con Arenado" data-image="imagenes/puerta con arenado ejem.jpeg">
-            <img src="imagenes/puerta con madera ejemplo.jpeg" alt="Ejemplo Personalizado 2" data-model="Puerta con Madera" data-image="imagenes/puerta con madera ejemplo.jpeg">
-            <img src="imagenes/mesa vidrio ejemplo.jpeg" alt="Ejemplo Personalizado 3" data-model="Mesa de Vidrio" data-image="imagenes/mesa vidrio ejemplo.jpeg">
+            <img src="imagenes/mampara trabajo.jpeg" alt="Proyecto 1">
+            <img src="imagenes/puerta local trabajo.jpeg" alt="Proyecto 2">
+            <img src="imagenes/piso vidrio ejem.jpeg" alt="Proyecto 3">
         </div>
     </section>
 
@@ -92,33 +67,11 @@
         </form>
     </section>
 
-<!-- Script para manejar el envío por WhatsApp -->
-<script>
-    // Enviar formulario de contacto por WhatsApp
-    document.getElementById('whatsapp-link').addEventListener('click', function(event) {
-        event.preventDefault();
-        const nombre = document.getElementById('nombre').value;
-        const mensaje = document.getElementById('mensaje').value;
-        const whatsappMessage = `Hola, soy ${nombre}. ${mensaje}`;
-        const whatsappUrl = `https://wa.me/59898948048?text=${encodeURIComponent(whatsappMessage)}`;
-        window.open(whatsappUrl, '_blank');
-    });
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/59898948048" class="whatsapp-button" target="_blank">
+        <img src="imagenes/whatsapp-icon.png" alt="WhatsApp Chat">
+    </a>
 
-    // Enviar mensaje de WhatsApp al hacer clic en una imagen de la galería
-    document.querySelectorAll('.gallery-container img').forEach(function(img) {
-        img.addEventListener('click', function() {
-            const modelo = img.getAttribute('data-model');
-            const imagenUrl = img.getAttribute('data-image');
-            const medidas = prompt(`Por favor, ingresa las medidas para el ${modelo}:`);
-
-            if (medidas) {
-                // Construir la URL completa de la imagen usando window.location.origin
-                const fullImageUrl = `${window.location.origin}/${imagenUrl}`;
-                
-                const whatsappMessage = `🔹 *Consulta de modelo*: ${modelo}\n🔹 *Medidas*: ${medidas}\n🔹 *Enviado desde*: Vidriería InnovaCrystal\n🔹 *Imagen del modelo*: ${fullImageUrl}`;
-                const whatsappUrl = `https://wa.me/59898948048?text=${encodeURIComponent(whatsappMessage)}`;
-                window.open(whatsappUrl, '_blank');
-            }
-        });
-    });
-</script>
+    <script src="scripts.js"></script>
+</body>
+</html>
